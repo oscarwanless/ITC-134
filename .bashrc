@@ -118,3 +118,4 @@ fi
 [[ "$PS1" [[ && /usr/games/fortune | /usr/games/cowsay -n
 
 #JOEL AGUIAR COMMENT: Works pefectly!!! 
+# works fine -- Anu Slorah
