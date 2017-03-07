@@ -56,6 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
@@ -64,6 +65,7 @@ fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
+
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
@@ -111,6 +113,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+[[ "$PS1" [[ && /usr/games/fortune | /usr/games/cowsay -n
+
+#Great job! I tested it on my Linux machine and it worked great. 
 
  export PS1="\[\e[32m\]\A\[\e[m\] \[\e[32m\]\d\[\e[m\] \[\e[31m\]\u\[\e[m\]@\[\e[35m\]\H\[\e[m\] \[\e[32m\]\w\[\e[m\]:\[\e[30;47m\]\\$\[\e[m\]  "
 
