@@ -119,3 +119,5 @@ espeak "hello and welcome to zombocom"
 #say goodbye message
 alias l="ls -a"
 alias exit='espeak "goodbye goodbye goodbyyyyyyyeeeeeee" && exit'
+
+#reviewed -- Anu Slorah
