@@ -48,8 +48,7 @@ esac
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
-
-# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 	# a case would tend to support setf rather than setaf.)
 	color_prompt=yes
     else
@@ -58,8 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -113,9 +111,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
- PS1='\[\e[1;36m\]\d \[\e[1;32m\]\t \[\e[1;33m\]\u@\[\e[1;35m\]\h:\w\$\[\e[0;31m\] '
 
-[[ "$PS1" [[ && /usr/games/fortune | /usr/games/cowsay -n
+ export PS1="\[\e[32m\]\A\[\e[m\] \[\e[32m\]\d\[\e[m\] \[\e[31m\]\u\[\e[m\]@\[\e[35m\]\H\[\e[m\] \[\e[32m\]\w\[\e[m\]:\[\e[30;47m\]\\$\[\e[m\]  "
 
-#JOEL AGUIAR COMMENT: Works pefectly!!! 
-# works fine -- Anu Slorah
+espeak "hello and welcome to zombocom"
+
+#say goodbye message
+alias l="ls -a"
+alias exit='espeak "goodbye goodbye goodbyyyyyyyeeeeeee" && exit'
