@@ -113,8 +113,17 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
- PS1='\[\e[1;36m\]\d \[\e[1;32m\]\t \[\e[1;33m\]\u@\[\e[1;35m\]\h:\w\$\[\e[0;31m\] '
 
 [[ "$PS1" [[ && /usr/games/fortune | /usr/games/cowsay -n
 
 #Great job! I tested it on my Linux machine and it worked great. 
+
+ export PS1="\[\e[32m\]\A\[\e[m\] \[\e[32m\]\d\[\e[m\] \[\e[31m\]\u\[\e[m\]@\[\e[35m\]\H\[\e[m\] \[\e[32m\]\w\[\e[m\]:\[\e[30;47m\]\\$\[\e[m\]  "
+
+espeak "hello and welcome to zombocom"
+
+#say goodbye message
+alias l="ls -a"
+alias exit='espeak "goodbye goodbye goodbyyyyyyyeeeeeee" && exit'
+
+#reviewed -- Anu Slorah
